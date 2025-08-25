@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.teste {
+    width: 48.542vw;
+    background-color: #001A4C;
+    height: 68.4vh;
+    opacity: 92%;
+    border-radius: 44px;
+}
+
+.teste2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/img/fundo.png");
+}
