@@ -4,19 +4,24 @@
     box-sizing: border-box;
 }
 
-.teste {
-    width: 48.542vw;
-    background-color: #001A4C;
-    height: 68.4vh;
-    opacity: 92%;
-    border-radius: 44px;
+body {
+    width: 100vw;
 }
 
-.teste2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.background {
+    background-image: url("../img/fundo.png");
     width: 100vw;
     height: 100vh;
-    background-image: url("/img/fundo.png");
+}
+
+.background2 {
+    background-color: #001A4C;
+    opacity: 92%;
+}
+.logo {
+
+}
+
+.forms{
+    
 }
