@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RetroCena</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo_aba.png" />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div class="background">
         <div class="background2">
-           <div class="logo">
-               <img src="img/logoEstendida.png" />
-                 </div>
-        <form>
-           <label for="nome">Nome de usuário</label>
-           <input type="text" name="none" id="">
-           <label for="">Senha do usuário</label>
-           <input type="text" name="" id="">
-           <button type="submit">Login</button>
+        <form class="formulario">
+            <div class="logo">
+            <img src="img/logoLongaW.png" />
+            </div>
+           <label for="nome">Nome de usuário:</label>
+           <input type="text" placeholder="Digite seu nome de usuario:" id="nome" name="nome" required>
+           <label for="senha">Senha do usuário:</label>
+           <input type="password" placeholder="Digite sua senha:" id="senha" name="senha" required>
+           <button class="login" type="submit" href="/pages/home.html">Login</button>
            <a href="pages/cadastro.html">Ainda não tem conta? Cadastre-se aqui</a>
+           <a>Esqueceu sua senha?</a>
         </form>
         </div>
+      </div>
     </div>
 </body>
 </html>

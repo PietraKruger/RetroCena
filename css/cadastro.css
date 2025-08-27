@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
 
   font-family: 'century gothic', sans-serif;
@@ -15,7 +16,6 @@ body {
   background-image: url("/img/fundo.png");
   background-repeat: repeat;
 }
-
 
 
 .background {
@@ -55,7 +55,6 @@ label{
 }
 
 
-
 input {
     background-color: #c9c9c9;
     font-family: 'century gothic', sans-serif;
@@ -70,8 +69,7 @@ input {
 }
 
 
-
-.login{
+.cadastro{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -88,10 +86,8 @@ input {
 
 
 a{
-    font-family: 'century gothic' , sans-serif ;
-    text-decoration: underline; 
+    font-family: 'century gothic', sans-serif;
     color: #ffffff;
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
     font-weight: 100;
-    cursor: pointer;
 }

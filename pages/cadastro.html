@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RetroCena</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo_aba.png" />
+    <link rel="stylesheet" href="/css/cadastro.css">
 </head>
 <body>
-    <div>
-        <div>
-            <img src="img/logoEstendida.png" />
-
-            <label for="nome">Endereço de E-mail:</label>
-            <input type="text" name="none" id="">
-            <label for="">Senha:</label>
-            <input type="text" name="" id="">
-            <button type="submit">Cadastro</button>
-            <a href="pages/index.html">Já tem conta? Entre aqui!</a>
+    <div class="background">
+        <div class="background2">
+        <form class="formulario">
+            <div class="logo">
+               <img src="/img/logoLongaW.png" />
+            </div>
+            <label for="email">Endereço de E-mail:</label>
+          <input type="email"  placeholder="Digite seu email:" id="email" name="email" required>
+          <label for="senha">Crie sua senha:</label>
+          <input type="password" placeholder="Digite uma senha:" id="senha" name="senha" required>
+            <button class="cadastro" type="submit">Cadastro</button>
+            <a href="/index.html">Já tem conta? Entre aqui!</a>
         </div>
     </div>
 </body>
