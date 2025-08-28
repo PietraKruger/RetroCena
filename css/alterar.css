@@ -3,3 +3,58 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #000;
+    font-family: 'century gothic', sans-serif;
+    font-size: 2dvh;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 70px;
+    margin: auto;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around ;
+    width: 40dvw;
+    height: 70dvh;
+    background-color: #000c22;
+    opacity: 92%;
+    border-radius: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+/* .foto{ 
+    width: 1vw;
+    height: auto;
+    margin-top: 20px ;
+    object-fit: cover; 
+    /* display: flex;
+   justify-content: center; */
+
+   img {
+     /* width: 15dvw;
+    height: auto;
+    margin-top: 20dpx ;
+    object-fit: cover;   */
+    width: 20dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   label{
+    
+   }

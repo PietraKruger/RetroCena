@@ -16,6 +16,7 @@ body{
     cursor: pointer;
     align-items: flex-start;
     width: 1%;
+    margin-top: 2dvh;
 }
 
 .banner {
@@ -25,12 +26,16 @@ body{
    justify-content: space-around;
    gap: 2em;
    cursor: pointer;
+   opacity: 45%;
 }
 
 #banner2 {
     border-radius: 22px;
 }
 
+/* .listas{
+    opacity: 20%;
+} */
 .lista{
     display: flex;
    flex-direction: row;
@@ -38,4 +43,5 @@ body{
    padding: 1em; 
    gap: 1em ;
    cursor: pointer;
+   opacity: 45%;
 }
