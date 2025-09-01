@@ -10,8 +10,23 @@ body {
     font-size: 2dvh;
     color: #ffffff;
     font-weight: 600;
-    padding: 70px;
+    /* padding: 30px; */
     margin: auto;
+}
+.logo {
+    
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    align-items: flex-start;
+    width: 50%;
+    height: auto;
+    margin-top: 10px ;
+}
+
+#logo2 {
+    width: 30%;
+    height: auto;
 }
 
 .background {
@@ -19,7 +34,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+   justify-content: space-around;
 }
 
 
@@ -29,7 +44,7 @@ form {
     align-items: center;
     justify-content: space-around ;
     width: 40dvw;
-    height: 70dvh;
+    height: 80dvh;
     background-color: #000c22;
     opacity: 92%;
     border-radius: 30px;
@@ -49,12 +64,38 @@ form {
     height: auto;
     margin-top: 20dpx ;
     object-fit: cover;   */
-    width: 20dvh;
+    padding: 1em;
+    width: 15dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
    }
 
-   label{
-    
+   .imutavel{
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1.5dvw;
    }
+   .mutavel{
+    font-family: 'century gothic', sans-serif;
+    font-weight: 400;
+    font-size: 1.5dvw;
+   }
+
+    button{
+    display: flex;
+    justify-content: center;
+    flex-wrap: row;
+    align-items: center;  
+    margin-top: 1dvh;
+    margin-bottom: 1dvh;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    width: 15dvw;
+    height: 7dvh;
+    border-radius: 9px;
+    cursor: pointer;
+    border-color: #ffffff;
+    padding: 1em;
+    }
+
