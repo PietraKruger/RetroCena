@@ -4,15 +4,72 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background-color: #000;
     font-family: 'century gothic', sans-serif;
     font-size: 2dvh;
     color: #ffffff;
     font-weight: 600;
-    /* padding: 30px; */
+    
     margin: auto;
+} */
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: sans-serif;
+    color: #ffffff;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;            /* largura estreita */
+    height: 100vh;          /* ocupa tela toda */
+    background: #00040a;       /* fundo preto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centralizar ícones na horizontal */
+    padding: 10px 0;
+    gap: 30px;              /* espaço entre os ícones */
+  }
+
+  /* Ícones */
+   .sidebar #icones {
+    color: #ffffff;
+    text-decoration: none;        /* tamanho do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4dvw;
+    height: 4px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .sidebar #icones :hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+ 
+  .linhas{
+    display: flex;
+    align-items: center;
+   margin-top: 2dvh;
+   margin-bottom: 5dvh;
+  }
+.configuracoes {
+    display: flex;
+    align-items: center;
+   margin-top: 50dvh;
 }
+ main{
+    background-color: #000;
+    font-family: 'century gothic', sans-serif;
+    font-size: 2dvh;
+    color: #ffffff;
+    font-weight: 600;
+    margin-right:60px;
+} 
 .logo {
     
     display: flex;
@@ -59,7 +116,7 @@ form {
     /* display: flex;
    justify-content: center; */
 
-   img {
+   #usuario {
      /* width: 15dvw;
     height: auto;
     margin-top: 20dpx ;
@@ -98,4 +155,5 @@ form {
     border-color: #ffffff;
     padding: 1em;
     }
+
 

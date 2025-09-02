@@ -7,10 +7,10 @@
 body {
 
   font-family: 'century gothic', sans-serif;
-  font-size: 2dvh;
+  font-size: 1dvw;
   color: #ffffff;
   font-weight: 600;
-  padding: 70px;
+  padding: 120px;
   margin: auto;
   background-image: url("/img/fundo.png");
   background-repeat: repeat;
@@ -51,8 +51,8 @@ form {
 label{
     display: flex;
     align-items: flex-start;
-
 }
+
 
 
 
@@ -70,6 +70,9 @@ input {
 }
 
 
+input::placeholder {
+font-size: 0.90dvw;
+}
 
 .login{
     display: flex;
