@@ -5,19 +5,12 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-}
-
-.logo {
+    background: #111;
+    height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    cursor: pointer;
-    align-items: flex-start;
-    width: 1%;
-    margin-top: 2dvh;
-  
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
 }
 
 .gallery-wrapper {
@@ -26,7 +19,6 @@ body {
     justify-content: center;
     gap: 1vw;
     position: relative;
-    background-color: aqua;
 }
 
 .arrow {
@@ -92,66 +84,4 @@ body {
     .gallery-image {
         width: clamp(120px, 30vw, 180px);
     }
-}
-/* #bannerHeader {
-    overflow: hidden;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 2rem;
-}
-
-#bannerHeader img {
-    cursor: pointer;
-    position: relative;
-
-}
-
-#banner1 {
-    border-radius: 22px;
-    position: fixed;
-    left: -400px;
-    opacity: 50%;
-}
-
-#banner2 {
-    border-radius: 22px;
-    position: fixed;
-    left: -400px;
-    opacity: 60%;
-}
-
-#bannerPrincipal {
-    border-radius: 22px;
-    justify-content: center;
-    left: -400px;
-    opacity: 80%;
-} */
-
-
-/* .listas{
-    opacity: 20%;
-} */
-.lista {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1em;
-    gap: 1em;
-    cursor: pointer;
-    opacity: 80%;
-}
-
-.bg {
-    background-color: red;
-}
-
-.bg1 {
-    background-color: yellow;
-}
-
-.bg2 {
-    background-color: green;
 }
