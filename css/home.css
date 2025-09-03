@@ -148,6 +148,9 @@ main{
     font-size: 1.5dvw;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }
+#funcionapls{
+   opacity: 80%;
+}
 
 @media (max-width: 600px) {
     .gallery {
