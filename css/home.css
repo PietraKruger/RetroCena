@@ -135,6 +135,7 @@ main{
 .cartao{
     position: relative;
 }
+
 .overlay{
     top: 80% ;
     bottom: 0;
@@ -144,6 +145,9 @@ main{
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 1.5dvw;
+}
+#funcionapls{
+   opacity: 80%;
 }
 
 @media (max-width: 600px) {
