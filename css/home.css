@@ -131,6 +131,9 @@ main{
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
+.cartao{
+    position: relative;
+}
 
 @media (max-width: 600px) {
     .gallery {
@@ -145,48 +148,16 @@ main{
         width: clamp(120px, 30vw, 180px);
     }
 }
-/* #bannerHeader {
-    overflow: hidden;
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    gap: 2rem;
-}
-
-#bannerHeader img {
-    cursor: pointer;
-    position: relative;
-
-}
-
-#banner1 {
-    border-radius: 22px;
-    position: fixed;
-    left: -400px;
-    opacity: 50%;
-}
-
-#banner2 {
-    border-radius: 22px;
-    position: fixed;
-    left: -400px;
-    opacity: 60%;
-}
-
-#bannerPrincipal {
-    border-radius: 22px;
-    justify-content: center;
-    left: -400px;
-    opacity: 80%;
-} */
-
-
-/* .listas{
-    opacity: 20%;
-} */
 .lista {
+    top: 80% ;
+    bottom: 0;
+    left: 1%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1.5dvw;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
     display: flex;
     flex-direction: row;
     justify-content: space-around;
