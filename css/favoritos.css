@@ -1,78 +1,186 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: #000;
-    font-family: sans-serif;
-    color: #ffffff;
-  }
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60px;            /* largura estreita */
-    height: 100vh;          /* ocupa tela toda */
-    background: #00040a;       /* fundo preto */
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* centralizar ícones na horizontal */
-    padding: 10px 0;
-    gap: 30px;              /* espaço entre os ícones */
-  }
-
-  /* Ícones */
-   .sidebar #icones {
-    color: #ffffff;
-    text-decoration: none;        /* tamanho do ícone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4dvw;
-    height: 4px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .sidebar #icones :hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
- 
-  .linhas{
-    display: flex;
-    align-items: center;
-   margin-top: 2dvh;
-   margin-bottom: 5dvh;
-  }
-.configuracoes {
-    display: flex;
-    align-items: center;
-   margin-top: 50dvh;
+  margin: 0;
+  background-color: #000;
+  font-family: sans-serif;
+  color: #ffffff;
 }
-main{
-    background-color: #000;
-    font-family: 'century gothic', sans-serif;
-    font-size: 2dvh;
-    color: #ffffff;
-    font-weight: 600;
-    margin-right:60px;
-} 
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  /* largura estreita */
+  height: 100vh;
+  /* ocupa tela toda */
+  background: #00040a;
+  /* fundo preto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centralizar ícones na horizontal */
+  padding: 10px 0;
+  gap: 30px;
+  /* espaço entre os ícones */
+}
+
+/* Ícones */
+.sidebar #icones {
+  color: #ffffff;
+  text-decoration: none;
+  /* tamanho do ícone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4dvw;
+  height: 4px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar #icones :hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.linhas {
+  display: flex;
+  align-items: center;
+  margin-top: 2dvh;
+  margin-bottom: 5dvh;
+}
+
+.configuracoes {
+  display: flex;
+  align-items: center;
+  margin-top: 40dvh;
+}
+
+main {
+  background-color: #000;
+  font-family: 'century gothic', sans-serif;
+  font-size: 2dvh;
+  color: #ffffff;
+  font-weight: 600;
+  margin-right: 60px;
+}
+
 .logo {
-    
-    display: flex;
-    justify-content: flex-start;
-    cursor: pointer;
-    align-items: flex-start;
-    width: 50%;
-    height: auto;
-    margin-top: 10px ;
+
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  align-items: flex-start;
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
 }
 
 #logo2 {
-    width: 30%;
-    height: auto;
+  width: 30%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .nome {
+  display: flex;
+  justify-self: flex-start;
+  flex-direction: column;
+} */
+
+.favoritos {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'century gothic', sans-serif;
+  margin-left: 50px;
+  font-weight: 700;
+  font-size: 4dvw;
+  font-style: italic;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: space-around;
+  position: relative;
+}
+
+
+
+.cartao {
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  top: 70%;
+  bottom: 0;
+  left: 2%;
+  right: 0;
+  position: absolute;
+  font-family: 'century gothic', sans-serif;
+  font-weight: 800;
+  font-size: 4dvw;
+}
+
+h1 {
+  font-family: 'century gothic', sans-serif;
+  font-weight: 700;
+  font-size: 3dvw;
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'century gothic', sans-serif;
+  font-weight: 500;
+  font-size: 1.5dvw;
+}
+
+#sombra {
+  opacity: 85%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  flex-wrap: row;
+  align-items: center;
+  margin-top: 0.2dvh;
+  margin-bottom: 0.3dvh;
+  background-color: #ffffff;
+  color: #2b3f65;
+  font-family: 'century gothic', sans-serif;
+  font-weight: 600;
+  font-size: 0.90dvw;
+  width: 6dvw;
+  height: 1dvh;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: #ffffff;
+  padding: 1em;
+}
+
+.lista {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+  gap: 1em;
+  cursor: pointer;
 }

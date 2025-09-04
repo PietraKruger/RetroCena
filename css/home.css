@@ -52,7 +52,7 @@ body {
 .configuracoes {
     display: flex;
     align-items: center;
-   margin-top: 50dvh;
+   margin-top: 40dvh;
 }
 
 main{
@@ -114,7 +114,7 @@ main{
 }
 
 .gallery-image.left {
-    width: clamp(400px, 55dvw, 800px);
+    width: clamp(500px, 55dvw, 900px);
     opacity: 0.6;
     transform: rotateY(-10deg) scale(0.9);
 }
@@ -137,6 +137,16 @@ main{
     position: relative;
 }
 
+.overlayleft{
+    top: 80% ;
+    bottom: 0;
+    left: 9%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1dvw;
+}
 .overlay{
     top: 80% ;
     bottom: 0;
@@ -146,10 +156,19 @@ main{
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 1.5dvw;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+.overlayright{
+    top: 80% ;
+    bottom: 0;
+    left: 9%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1dvw;
 }
 #funcionapls{
-   opacity: 80%;
+   opacity: 78%;
 }
 
 @media (max-width: 600px) {
@@ -179,15 +198,104 @@ main{
 .overlay2{
     top: 80% ;
     bottom: 0;
-    left: 1%;
+    left: 3%;
     right:0 ;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 1.5dvw;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    font-size: 0.55dvw;
+}
+.overlay3{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.50dvw;
+}
+.overlay4{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay5{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay6{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay7{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
 }
 
+.overlay8{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay9{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay10{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+.overlay11{
+    top: 80% ;
+    bottom: 0;
+    left: 3%;
+    right:0 ;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
 .bg {
     background-color: red;
 }

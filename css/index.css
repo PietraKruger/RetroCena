@@ -6,14 +6,14 @@
 
 body {
 
-  font-family: 'century gothic', sans-serif;
-  font-size: 1dvw;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 120px;
-  margin: auto;
-  background-image: url("/img/fundo.png");
-  background-repeat: repeat;
+    font-family: 'century gothic', sans-serif;
+    font-size: 1dvw;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 120px;
+    margin: auto;
+    background-image: url("/img/fundo.png");
+    background-repeat: repeat;
 }
 
 
@@ -29,8 +29,8 @@ body {
 img {
     width: 15dvw;
     height: auto;
-    margin-top: 20dpx ;
-    object-fit: cover;  
+    margin-top: 20dpx;
+    object-fit: cover;
 }
 
 
@@ -38,7 +38,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around ;
+    justify-content: space-around;
     width: 50dvw;
     height: 65dvh;
     background-color: #001A4C;
@@ -47,8 +47,8 @@ form {
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
- 
-label{
+
+label {
     display: flex;
     align-items: flex-start;
 }
@@ -71,30 +71,35 @@ input {
 
 
 input::placeholder {
-font-size: 0.90dvw;
+    font-size: 0.90dvw;
 }
 
-.login{
+.login {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     margin-top: 2dvh;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
+    background-color: #ffffff;
+    color: #182340;
     width: 40dvw;
     height: 6dvh;
     border-radius: 9px;
     cursor: pointer;
-    border-color: #ffffff;
+    border-color: #556e94;
+    text-decoration: none;
+    /* tira o sublinhado */
 }
 
 
-a{
-    font-family: 'century gothic' , sans-serif ;
-    text-decoration: underline; 
+a {
+    font-family: 'century gothic', sans-serif;
+    text-decoration: underline;
     color: #ffffff;
     margin-bottom: 1dvh;
     font-weight: 100;
     cursor: pointer;
+    text-decoration: none;
 }
