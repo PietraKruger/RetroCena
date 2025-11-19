@@ -10,6 +10,20 @@ body {
     font-family: sans-serif;
     color: #ffffff;
   }
+
+  .hero {
+    position: relative;
+    /* background-image: url("/img/tela-inicial/minha-mae-e-uma-peca.png"); */
+    background-size: cover;
+    background-position: center;
+    height: 75dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 3dvw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+  }
+
   .sidebar {
     position: fixed;
     top: 0;
