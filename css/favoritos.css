@@ -93,12 +93,6 @@ main {
   flex-direction: column;
 }
 
-/* .nome {
-  display: flex;
-  justify-self: flex-start;
-  flex-direction: column;
-} */
-
 .favoritos {
   display: flex;
   justify-content: flex-start;
