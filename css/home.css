@@ -5,13 +5,15 @@
 }
 
 body {
-    margin: 0;
-    background-color: #000;
-    font-family: sans-serif;
-    color: #ffffff;
-  }
+    background-color: #000000de;
+    background-position: center;
+    width: 100dvw;
+    height: 100dvh;
+    color: #fff;
+}
 
-  .hero {
+
+.hero {
     position: relative;
     /* background-image: url("/img/tela-inicial/minha-mae-e-uma-peca.png"); */
     background-size: cover;
@@ -22,70 +24,173 @@ body {
     justify-content: space-between;
     padding: 2rem 3dvw;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60px;            /* largura estreita */
-    height: 100vh;          /* ocupa tela toda */
-    background: #00040a;       /* fundo preto */
-    opacity: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* centralizar ícones na horizontal */
-    padding: 10px 0;
-    gap: 30px;              /* espaço entre os ícones */
-  }
-
-  /* Ícones */
-   .sidebar #icones {
-    color: #ffffff;
-    text-decoration: none;        /* tamanho do ícone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4dvw;
-    height: 4px;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .sidebar #icones :hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
- 
-  .linhas{
-    display: flex;
-    align-items: center;
-   margin-top: 2dvh;
-   margin-bottom: 5dvh;
-  }
-.configuracoes {
-    display: flex;
-    align-items: center;
-   margin-top: 40dvh;
 }
 
-main{
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0rem 0rem 0rem 1rem;
+}
+
+.logo-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Dropdown oculto por padrão */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 3.2rem;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    min-width: 200px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Mostrar dropdown no hover (funciona bem em desktop;
+     em mobile o primeiro toque ativa o :hover) */
+.logo-menu:hover .dropdown {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown li {
+    padding: 0.8rem 1rem;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown li a:hover {
+    background-color: #333;
+    color: #facc15;
+    border-radius: 4px;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+input {
+    color: #000000;
+    background-color: transparent;
+    border-radius: 42px;
+    background-image: url(/assets/img/tela-inicial/pesquisar.png);
+    background-repeat: no-repeat;
+    background-position: 9rem;
+    padding: 0.5rem;
+}
+
+
+.nav-right {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+  
+  .nav-right li a {
+    color: white;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-right li a:hover {
+    color: #2C6FD1;
+  }
+
+/* ------------------- BARRA DE PESQUISA ------------------- */
+.pesquisar-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border: #000000;
+    border: size 20px;
+    border-radius: 15px;
+    padding: 0rem 0em 0rem 10rem;
+}
+
+.pesquisar-container input {
+    color: #000000;
+    background-color: transparent;
+    border-radius: 42px;
+    background-image: url(/assets/img/tela-inicial/pesquisar.png);
+    background-repeat: no-repeat;
+    background-position: 9rem;
+    padding: 0.5rem;
+}
+
+.pesquisar-container .pesquisar-icone {
+    position: absolute;
+    top: 12%;
+    transform: translateY(-30%);
+    width: 1rem;
+    height: 1rem;
+}
+
+.notificacao {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    border: #000000;
+    border: size 20px;
+    border-radius: 15px;
+    padding-left: 30rem;
+    padding: 0rem 0em 0rem 30rem;
+}
+
+.user {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+
+main {
     background-color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    margin-right:60px;
-    padding:20px;
+    margin-right: 60px;
+    padding: 20px;
 }
 
-.logo {
-    display: flex;
-    justify-content: flex-start;
-    cursor: pointer;
-    align-items: flex-start;
-    width: 1%;
-    margin-top: 2dvh;
-  
-}
 
 .gallery-wrapper {
     display: flex;
@@ -147,42 +252,45 @@ main{
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
-.cartao{
+.cartao {
     position: relative;
 }
 
-.overlayleft{
-    top: 80% ;
+.overlayleft {
+    top: 80%;
     bottom: 0;
     left: 9%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 1dvw;
 }
-.overlay{
-    top: 80% ;
+
+.overlay {
+    top: 80%;
     bottom: 0;
     left: 1%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 1.5dvw;
 }
-.overlayright{
-    top: 80% ;
+
+.overlayright {
+    top: 80%;
     bottom: 0;
     left: 9%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 1dvw;
 }
-#funcionapls{
-   opacity: 78%;
+
+#funcionapls {
+    opacity: 78%;
 }
 
 @media (max-width: 600px) {
@@ -209,107 +317,116 @@ main{
     opacity: 80%;
 }
 
-.overlay2{
-    top: 80% ;
+.overlay2 {
+    top: 80%;
     bottom: 0;
     left: 3%;
-    right:0 ;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-.overlay3{
-    top: 80% ;
-    bottom: 0;
-    left: 3%;
-    right:0 ;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.50dvw;
-}
-.overlay4{
-    top: 80% ;
-    bottom: 0;
-    left: 3%;
-    right:0 ;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-.overlay5{
-    top: 80% ;
-    bottom: 0;
-    left: 3%;
-    right:0 ;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-.overlay6{
-    top: 80% ;
-    bottom: 0;
-    left: 3%;
-    right:0 ;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-.overlay7{
-    top: 80% ;
-    bottom: 0;
-    left: 3%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 0.55dvw;
 }
 
-.overlay8{
-    top: 80% ;
+.overlay3 {
+    top: 80%;
     bottom: 0;
     left: 3%;
-    right:0 ;
+    right: 0;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.50dvw;
+}
+
+.overlay4 {
+    top: 80%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 0.55dvw;
 }
-.overlay9{
-    top: 80% ;
+
+.overlay5 {
+    top: 80%;
     bottom: 0;
     left: 3%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 0.55dvw;
 }
-.overlay10{
-    top: 80% ;
+
+.overlay6 {
+    top: 80%;
     bottom: 0;
     left: 3%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 0.55dvw;
 }
-.overlay11{
-    top: 80% ;
+
+.overlay7 {
+    top: 80%;
     bottom: 0;
     left: 3%;
-    right:0 ;
+    right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
     font-size: 0.55dvw;
 }
+
+.overlay8 {
+    top: 80%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+
+.overlay9 {
+    top: 80%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+
+.overlay10 {
+    top: 80%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+
+.overlay11 {
+    top: 80%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    position: absolute;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 0.55dvw;
+}
+
 .bg {
     background-color: red;
 }
