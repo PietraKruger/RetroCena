@@ -7,124 +7,35 @@
 body {
     background-color: #000000de;
     background-position: center;
-    width: 100dvw;
-    height: 100dvh;
+    width: 100%;
     color: #fff;
 }
 
 
 .hero {
     position: relative;
-    /* background-image: url("/img/tela-inicial/minha-mae-e-uma-peca.png"); */
     background-size: cover;
     background-position: center;
-    height: 75dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2rem 3dvw;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+    height: 85dvh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
 }
 
-nav {
+.nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0rem 0rem 0rem 1rem;
+ justify-content: space-between;
+    padding: 2rem;
+    gap: 4rem;
 }
 
-.logo-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.logo-img {
-    width: 7rem;
-    height: 7rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* Dropdown oculto por padrão */
-.dropdown {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 3.2rem;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 6px;
-    min-width: 200px;
-    z-index: 1000;
-    padding: 0.5rem 0;
-    list-style: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Mostrar dropdown no hover (funciona bem em desktop;
-     em mobile o primeiro toque ativa o :hover) */
-.logo-menu:hover .dropdown {
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
-
-.dropdown li {
-    padding: 0.8rem 1rem;
-}
-
-.dropdown li a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    transition: background 0.3s;
-}
-
-.dropdown li a:hover {
-    background-color: #333;
-    color: #facc15;
-    border-radius: 4px;
-}
-
-/* Animação */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-ul {
+.nav-em-partes {
     display: flex;
-    justify-content: space-around;
-    gap: 5rem;
-}
-
-input {
-    color: #000000;
-    background-color: transparent;
-    border-radius: 42px;
-    background-image: url(/assets/img/tela-inicial/pesquisar.png);
-    background-repeat: no-repeat;
-    background-position: 9rem;
-    padding: 0.5rem;
-}
-
-
-.nav-right {
-    display: flex;
-    gap: 3rem;
+    gap: 12rem;
     list-style: none;
   }
   
-  .nav-right li a {
+  .nav-em-partes li a {
     color: white;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
@@ -133,7 +44,7 @@ input {
     transition: color 0.3s;
   }
   
-  .nav-right li a:hover {
+  .nav-em-partes li a:hover {
     color: #2C6FD1;
   }
 
@@ -142,40 +53,37 @@ input {
     display: flex;
     align-items: center;
     gap: 3rem;
-    border: #000000;
+    border: white;
     border: size 20px;
     border-radius: 15px;
     padding: 0rem 0em 0rem 10rem;
 }
 
 .pesquisar-container input {
-    color: #000000;
+    color: white;
     background-color: transparent;
     border-radius: 42px;
     background-image: url(/assets/img/tela-inicial/pesquisar.png);
     background-repeat: no-repeat;
     background-position: 9rem;
     padding: 0.5rem;
+    border: 2px solid white;
+}
+::placeholder {
+color: white;
+font-family: 'century gothic', sans-serif;
+font-size: 1rem;
 }
 
 .pesquisar-container .pesquisar-icone {
     position: absolute;
-    top: 12%;
-    transform: translateY(-30%);
+    right: 11.5%;
+    transform: translateY(100% 50% );
     width: 1rem;
     height: 1rem;
 }
 
-.notificacao {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    border: #000000;
-    border: size 20px;
-    border-radius: 15px;
-    padding-left: 30rem;
-    padding: 0rem 0em 0rem 30rem;
-}
+
 
 .user {
     width: 1.9rem;
