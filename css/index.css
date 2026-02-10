@@ -92,8 +92,7 @@ input::placeholder {
     text-decoration: none;
     /* tira o sublinhado */
 }
-
-
+ 
 a {
     font-family: 'century gothic', sans-serif;
     text-decoration: underline;
