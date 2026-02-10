@@ -197,10 +197,9 @@ main {
     font-size: 1dvw;
 }
 
-#funcionapls {
-    opacity: 78%;
+.container{
+    
 }
-
 @media (max-width: 600px) {
     .gallery {
         gap: 1vw;
@@ -225,7 +224,7 @@ main {
     opacity: 80%;
 }
 
-.overlay2 {
+.overlay{
     top: 80%;
     bottom: 0;
     left: 3%;
@@ -236,104 +235,6 @@ main {
     font-size: 0.55dvw;
 }
 
-.overlay3 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.50dvw;
-}
-
-.overlay4 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay5 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay6 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay7 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay8 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay9 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay10 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay11 {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
 
 .bg {
     background-color: red;
