@@ -4,71 +4,11 @@
   box-sizing: border-box;
 }
 
-/* body {
-    background-color: #000;
-    font-family: 'century gothic', sans-serif;
-    font-size: 2dvh;
-    color: #ffffff;
-    font-weight: 600;
-    
-    margin: auto;
-} */
 body {
   margin: 0;
   background-color: #000000;
   font-family: sans-serif;
   color: #ffffff;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 60px;
-  /* largura estreita */
-  height: 100vh;
-  /* ocupa tela toda */
-  background: #00040a;
-  /* fundo preto */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* centralizar ícones na horizontal */
-  padding: 10px 0;
-  gap: 30px;
-  /* espaço entre os ícones */
-}
-
-/* Ícones */
-.sidebar #icones {
-  color: #ffffff;
-  text-decoration: none;
-  /* tamanho do ícone */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4dvw;
-  height: 4px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.sidebar #icones :hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-
-.linhas {
-  display: flex;
-  align-items: center;
-  margin-top: 2dvh;
-  margin-bottom: 5dvh;
-}
-
-.configuracoes {
-  display: flex;
-  align-items: center;
-  margin-top: 40dvh;
 }
 
 main {
@@ -78,6 +18,26 @@ main {
   color: #ffffff;
   font-weight: 600;
   margin-right: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 40dvw;
+  height: 80dvh;
+  background-color: #000c22;
+  opacity: 92%;
+  border-radius: 30px;
+}
+
+#usuario {
+  padding: 1em;
+  width: 15dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -102,40 +62,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 40dvw;
-  height: 80dvh;
-  background-color: #000c22;
-  opacity: 92%;
-  border-radius: 30px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-}
-
-/* .foto{ 
-    width: 1vw;
-    height: auto;
-    margin-top: 20px ;
-    object-fit: cover; 
-    /* display: flex;
-   justify-content: center; */
-
-#usuario {
-  /* width: 15dvw;
-    height: auto;
-    margin-top: 20dpx ;
-    object-fit: cover;   */
-  padding: 1em;
-  width: 15dvw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .imutavel {
