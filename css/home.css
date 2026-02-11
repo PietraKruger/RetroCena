@@ -5,233 +5,162 @@
 }
 
 body {
-    background-color: #000000de;
-    width: 100%;
+    background-color: #0a0a0a;
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
-
+/* Hero Section */
 .hero {
-    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #0a0a0a),
+        url('/img/tela-inicial/minha-mae-e-uma-peca.png');
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 85dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+    display: flex;
+    flex-direction: column;
 }
 
 .nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 2rem;
-    gap: 3rem;
+    align-items: center;
+    padding: 2rem 4vw;
 }
 
 .nav-em-partes {
     display: flex;
-    gap: 5rem;
     list-style: none;
+    gap: 3rem;
 }
 
 .nav-em-partes li a {
     color: white;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
     text-decoration: none;
-    transition: color 0.3s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .nav-em-partes li a:hover {
     color: #2C6FD1;
 }
 
-/* ------------------- BARRA DE PESQUISA ------------------- */
-.pesquisar-container {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    border: white;
-    /* border: size 20px;*/
-    border-radius: 15px;
-    /*padding: 0rem 0em 0rem 10rem;*/
-    opacity: 100%
-}
-
 .pesquisar-container input {
+    background: transparent;
+    border: 0.15rem solid white;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
     color: white;
-    background-color: transparent;
-    border-radius: 42px;
-    background-image: url(/assets/img/tela-inicial/pesquisar.png);
-    background-repeat: no-repeat;
-    background-position: 9rem;
-    padding: 0.5rem;
-    border: 2px solid white;
+    outline: none;
+    width: 15vw;
 }
 
-::placeholder {
-    color: white;
-    font-family: 'century gothic', sans-serif;
-    font-size: 1rem;
-}
-
-.pesquisar-container .pesquisar-icone {
-    position: absolute;
-    right: 11.5%;
-    transform: translateY(100% 50%);
-    width: 1rem;
-    height: 1rem;
-}
-
-
-
-.user {
-    width: 1.9rem;
-    height: 1.9rem;
-}
-
-/*MAIN*/
+/* Main Content & Carrossel */
 main {
-    background-color: rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    margin-right: 60px;
-    padding: 20px;
-    width: 100%;
-
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 2vh 0;
 }
 
-main img{
-    height: 100%;
-    width: 95%;
-}
-/*------------------------------------------------------------*/
-.gallery-wrapper {
+.lista-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
     position: relative;
+    padding: 0 2vw;
+    width: 100vw;
 }
 
-.arrow {
-    padding: 1rem;
-    cursor: default;
-    opacity: 0.5;
+.carrossel-window {
+    overflow: hidden;
+    width: 90vw;
 }
 
-.arrow svg {
-    width: 2.5rem;
-    height: 2.5rem;
-    stroke: white;
-}
-
-/*IMAGEM FILMES + NOMES*/
-.cartao {
-    position: relative;
-}
-/*---------------------------------------------------------------------*/
-/*NOMES DOS FILMES
-.overlayleft {
-    top: 80%;
-    bottom: 0;
-    left: 9%;
-    right: 0;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
-
-.overlay {
-    top: 80%;
-    bottom: 0;
-    left: 1%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 600;
-    font-size: 1dvw;
-}
-
-.overlayright {
-    top: 80%;
-    bottom: 0;
-    left: 9%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 600;
-    font-size: 1dvw;
-}
-/*--------------------------------------------------------*/
-@media (max-width: 600px) {
-    .gallery {
-        gap: 1vw;
-    }
-
-    .gallery-image.center {
-        width: clamp(250px, 80vw, 350px);
-    }
-
-    .gallery-image {
-        width: clamp(120px, 30vw, 180px);
-    }
-}
-/*SECTION FILMES*/
-.lista {
+.carrossel-track {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1em;
-    margin-left: 3em;
-    cursor: pointer;
-    opacity: 70%;
-    
-}
-/*---------------------------------------------------------------------*/
-/*NOMES DOS FILMES*/
-.overlay {
-    top: 80%;
-    bottom: 0;
-    left: 3%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 600;
-    font-size: 0.48dvw;
-}
-/*---------------------------------------------------------------------*/
-/*CARROSSEL*/
-.carrossel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;;
-  
-}
-.carrossel img {
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
+    gap: 1.5rem;
+    transition: transform 0.5s ease-in-out;
 }
 
-button {
-  transform: translateY(-50%);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: none;
-  background: black;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 4em;
+.cartao {
+    flex: 0 0 calc(20vw - 1.5rem);
+    /* Exibe 5 itens por padrão */
+    position: relative;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
-.direito{
-    margin-top: 4em;
+
+.cartao:hover {
+    transform: scale(1.05);
 }
- 
-button:hover {
-  background-color: rgba(0,0,0,0.75);
+
+.cartao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
-/*--------------------------------------------------------------------*/
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.overlay h1 {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Botões do Carrossel */
+.seta {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .cartao {
+        flex: 0 0 calc(33.33vw - 1.5rem);
+    }
+
+    /* 3 itens */
+    .pesquisar-container input {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .cartao {
+        flex: 0 0 calc(50vw - 2rem);
+    }
+
+    /* 2 itens */
+    .nav-em-partes {
+        display: none;
+    }
+
+    /* Esconde menu no mobile para simplificar */
+    .hero {
+        height: 50vh;
+    }
+}
