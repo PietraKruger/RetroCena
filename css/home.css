@@ -14,6 +14,7 @@ body {
     position: relative;
     background-size: cover;
     background-position: center;
+    width: 100%;
     height: 85dvh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
 }
@@ -24,7 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .nav-em-partes {
@@ -97,12 +98,13 @@ main {
     color: white;
     margin-right: 60px;
     padding: 20px;
+    width: 100%;
 
 }
 
 main img{
     height: 100%;
-    width: 90%;
+    width: 95%;
 }
 /*------------------------------------------------------------*/
 .gallery-wrapper {
@@ -130,7 +132,7 @@ main img{
     position: relative;
 }
 /*---------------------------------------------------------------------*/
-/*NOMES DOS FILMES*/
+/*NOMES DOS FILMES
 .overlayleft {
     top: 80%;
     bottom: 0;
@@ -138,7 +140,7 @@ main img{
     right: 0;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 1dvw;
+    font-size: 0.55dvw;
 }
 
 .overlay {
@@ -148,8 +150,8 @@ main img{
     right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 1.5dvw;
+    font-weight: 600;
+    font-size: 1dvw;
 }
 
 .overlayright {
@@ -159,7 +161,7 @@ main img{
     right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1dvw;
 }
 /*--------------------------------------------------------*/
@@ -182,9 +184,10 @@ main img{
     flex-direction: row;
     justify-content: space-around;
     padding: 1em;
-    gap: 1em;
+    margin-left: 3em;
     cursor: pointer;
-    opacity: 80%;
+    opacity: 70%;
+    
 }
 /*---------------------------------------------------------------------*/
 /*NOMES DOS FILMES*/
@@ -195,18 +198,40 @@ main img{
     right: 0;
     position: absolute;
     font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
+    font-weight: 600;
+    font-size: 0.48dvw;
 }
 /*---------------------------------------------------------------------*/
 /*CARROSSEL*/
 .carrossel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;;
+  
 }
 .carrossel img {
   max-width: 100%;
   object-fit: contain;
   display: block;
+}
+
+button {
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 4em;
+}
+.direito{
+    margin-top: 4em;
+}
+ 
+button:hover {
+  background-color: rgba(0,0,0,0.75);
 }
 /*--------------------------------------------------------------------*/
