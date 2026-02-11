@@ -1,17 +1,28 @@
-let campEmail = document.getElementById("email");
+const campEmail = document.getElementById("email");
 const campSenha = document.getElementById("senha");
-const btnCadastrar = document.getElementsByClassName("btn-cadastrar");
-const btnPaglogin = document.getElementsByClassName("btn-pagLogin")
+const btnCadastrar = document.getElementById("btn-cadastrar");
 
+// Remova a criação do objeto 'usuario' e o 'setItem' daqui de cima, 
+// pois eles rodam antes do usuário digitar qualquer coisa.
 
-const usuario = {
-    "email": campEmail.value,
-    "senha": campSenha.value,
-}
+btnCadastrar.addEventListener("click", () => {
+    // 1. Captura os valores no momento do clique
+    const usuario = {
+        email: campEmail.value,
+        senha: campSenha.value,
+    };
 
-localStorage.setItem("usuario", JSON.stringify(usuario));
+    // 2. Salva no localStorage
+    localStorage.setItem("usuario", JSON.stringify(usuario));
 
+    // const user = localStorage.getItem("usuario")
 
-btnCadastrar.addEventListener("click", function () {
-    window.location.assign("/pages/home.html")
-})
+    // if (campEmail.value === user.email && campSenha.value === user.senha) {
+    //     // logica p-ra fazer login
+    // } else {
+    //     alert("usuario ou senha invválida")
+    // }
+
+    // 3. Redireciona para a home
+    location.href = "./home.html";
+});         
