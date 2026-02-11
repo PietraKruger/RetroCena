@@ -5,32 +5,30 @@
 }
 
 body {
-    background-color: #000000de;
+    background-color: black;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+nav {
 
-.hero {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 85dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
-}
-
-.nav {
     display: flex;
     flex-direction: row;
+    justify-self: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    gap: 3rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    gap: 2rem;
 }
 
 .nav-em-partes {
     display: flex;
-    gap: 5rem;
+    gap: 2.5rem;
     list-style: none;
 }
 
@@ -38,7 +36,7 @@ body {
     color: white;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.5dvw;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -56,7 +54,6 @@ body {
     /* border: size 20px;*/
     border-radius: 15px;
     /*padding: 0rem 0em 0rem 10rem;*/
-    opacity: 100%
 }
 
 .pesquisar-container input {
@@ -85,15 +82,28 @@ body {
 }
 
 
+.hero {
+    display: flex;
+   background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90dvh;
+    width: 95dvw;
+    border-radius: 30px;
+    background-image: linear-gradient( to top , rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+}
 
-.user {
-    width: 1.9rem;
-    height: 1.9rem;
+p {
+    color: white;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+   padding-top: 30rem; 
+   padding-left: 1.5rem;
 }
 
 /*MAIN*/
 main {
-    background-color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
     color: white;
     margin-right: 60px;
@@ -102,10 +112,11 @@ main {
 
 }
 
-main img{
+main img {
     height: 100%;
     width: 95%;
 }
+
 /*------------------------------------------------------------*/
 .gallery-wrapper {
     display: flex;
@@ -131,40 +142,7 @@ main img{
 .cartao {
     position: relative;
 }
-/*---------------------------------------------------------------------*/
-/*NOMES DOS FILMES
-.overlayleft {
-    top: 80%;
-    bottom: 0;
-    left: 9%;
-    right: 0;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 700;
-    font-size: 0.55dvw;
-}
 
-.overlay {
-    top: 80%;
-    bottom: 0;
-    left: 1%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 600;
-    font-size: 1dvw;
-}
-
-.overlayright {
-    top: 80%;
-    bottom: 0;
-    left: 9%;
-    right: 0;
-    position: absolute;
-    font-family: 'century gothic', sans-serif;
-    font-weight: 600;
-    font-size: 1dvw;
-}
-/*--------------------------------------------------------*/
 @media (max-width: 600px) {
     .gallery {
         gap: 1vw;
@@ -178,6 +156,7 @@ main img{
         width: clamp(120px, 30vw, 180px);
     }
 }
+
 /*SECTION FILMES*/
 .lista {
     display: flex;
@@ -187,8 +166,9 @@ main img{
     margin-left: 3em;
     cursor: pointer;
     opacity: 70%;
-    
+
 }
+
 /*---------------------------------------------------------------------*/
 /*NOMES DOS FILMES*/
 .overlay {
@@ -201,37 +181,42 @@ main img{
     font-weight: 600;
     font-size: 0.48dvw;
 }
+
 /*---------------------------------------------------------------------*/
 /*CARROSSEL*/
 .carrossel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;;
-  
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    ;
+
 }
+
 .carrossel img {
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 button {
-  transform: translateY(-50%);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: none;
-  background: black;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 4em;
-}
-.direito{
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
     margin-top: 4em;
 }
- 
-button:hover {
-  background-color: rgba(0,0,0,0.75);
+
+.direito {
+    margin-top: 4em;
 }
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 /*--------------------------------------------------------------------*/
