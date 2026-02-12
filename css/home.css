@@ -4,18 +4,17 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
-    width: 100%;
     display: flex;
+    width: 100dvw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    overflow-x: hidden;
 }
 
 nav {
-
     display: flex;
     flex-direction: row;
     justify-self: center;
@@ -27,17 +26,22 @@ nav {
     gap: 2rem;
 }
 
+
 .nav-em-partes {
     display: flex;
     gap: 2.5rem;
     list-style: none;
 }
 
+.nav-em-partes img {
+    width: 40vw;
+}
+
 .nav-em-partes li a {
     color: white;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 1.5dvw;
+    font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -85,22 +89,44 @@ nav {
 
 .hero {
     display: flex;
-   background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    flex-direction: column;
+    align-items: center;
     height: 90dvh;
     width: 95dvw;
-    border-radius: 30px;
-    background-image: linear-gradient( to top , rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 10dvh;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-p {
-    color: white;
-    font-family: 'century gothic', sans-serif;
+.hero img {
+    width: 95dvw;
+    height: 90dvh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.hero:hover {
+    transform: scale(1.05);
+}
+
+.sobreposto {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    position: absolute;
+    bottom: 0;
+    width: 95dvw;
+}
+
+.sobreposto p {
     font-weight: 700;
-    font-size: 5rem;
-   padding-top: 30rem; 
-   padding-left: 1.5rem;
+    font-size: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'century gothic', sans-serif;
+    color: white;
+
 }
 
 /* Main Content & Carrossel */
@@ -132,6 +158,8 @@ main {
 }
 
 .cartao {
+    display: flex;
+    right: 2rem;
     flex: 0 0 calc(20vw - 1.5rem);
     /* Exibe 5 itens por padrão */
     position: relative;
@@ -161,8 +189,9 @@ main {
 }
 
 .overlay h1 {
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 1rem;
+    font-family: 'century gothic', sans-serif;
+    color: white;
 }
 
 /* Botões do Carrossel */
@@ -182,6 +211,7 @@ main {
 }
 
 /* Responsividade */
+
 @media (max-width: 1024px) {
     .cartao {
         flex: 0 0 calc(33.33vw - 1.5rem);
@@ -198,13 +228,4 @@ main {
         flex: 0 0 calc(50vw - 2rem);
     }
 
-    /* 2 itens */
-    .nav-em-partes {
-        display: none;
-    }
-
-    /* Esconde menu no mobile para simplificar */
-    .hero {
-        height: 50vh;
-    }
 }
