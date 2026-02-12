@@ -32,12 +32,13 @@ nav {
 
 .nav-em-partes {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
 }
 
 .nav-em-partes img {
-    width: 40vw;
+    width: 95dvw;
+    height: 90dvh;
 }
 
 .nav-em-partes li a {
@@ -242,10 +243,6 @@ main {
 
 /* Celulares Pequenos */
 @media (max-width: 480px) {
-    .nav-em-partes {
-        display: none;
-        /* Esconde links para economizar espaço */
-    }
 
     .hero p {
         font-size: 2rem;
