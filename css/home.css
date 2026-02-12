@@ -1,30 +1,29 @@
+/* ------------------- RESET E BASE ------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    overflow-x: hidden; /* Evita scroll horizontal indesejado */
 }
 
+/* ------------------- NAVEGAÇÃO ------------------- */
 nav {
-
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
+    padding: 2rem;
     gap: 2rem;
+    width: 100%;
 }
 
 .nav-em-partes {
@@ -37,7 +36,7 @@ nav {
     color: white;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 1.5dvw;
+    font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -48,67 +47,57 @@ nav {
 
 /* ------------------- BARRA DE PESQUISA ------------------- */
 .pesquisar-container {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 3rem;
-    border: white;
-    /* border: size 20px;*/
-    border-radius: 15px;
-    /*padding: 0rem 0em 0rem 10rem;*/
 }
 
 .pesquisar-container input {
     color: white;
     background-color: transparent;
     border-radius: 42px;
-    background-image: url(/assets/img/tela-inicial/pesquisar.png);
-    background-repeat: no-repeat;
-    background-position: 9rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border: 2px solid white;
+    width: 200px;
+    transition: width 0.3s ease;
 }
 
 ::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     font-family: 'century gothic', sans-serif;
-    font-size: 1rem;
 }
 
-.pesquisar-container .pesquisar-icone {
-    position: absolute;
-    right: 11.5%;
-    transform: translateY(100% 50%);
-    width: 1rem;
-    height: 1rem;
-}
-
-
+/* ------------------- HERO SECTION ------------------- */
 .hero {
     display: flex;
-   background-size: 100%;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinha o texto na parte de baixo */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 90dvh;
+    height: 80dvh;
     width: 95dvw;
     border-radius: 30px;
-    background-image: linear-gradient( to top , rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), url('/img/tela-inicial/minha-mae-e-uma-peca.png');
+    padding: 3rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)), 
+                      url('/img/tela-inicial/minha-mae-e-uma-peca.png');
 }
 
-p {
+.hero p {
     color: white;
     font-family: 'century gothic', sans-serif;
     font-weight: 700;
-    font-size: 5rem;
-   padding-top: 30rem; 
-   padding-left: 1.5rem;
+    font-size: clamp(2.5rem, 6vw, 5rem); /* Fonte cresce conforme a tela */
+    margin: 0;
 }
 
-/* Main Content & Carrossel */
+/* ------------------- CARROSSEL ------------------- */
 main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
     padding: 2vh 0;
+    width: 100%;
 }
 
 .lista-container {
@@ -117,7 +106,7 @@ main {
     justify-content: center;
     position: relative;
     padding: 0 2vw;
-    width: 100vw;
+    width: 100%;
 }
 
 .carrossel-window {
@@ -132,10 +121,9 @@ main {
 }
 
 .cartao {
-    flex: 0 0 calc(20vw - 1.5rem);
-    /* Exibe 5 itens por padrão */
+    flex: 0 0 calc(20% - 1.5rem); /* 5 itens por padrão */
     position: relative;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9; /* Proporção widescreen */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -151,60 +139,56 @@ main {
     border-radius: 0.5rem;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-    border-radius: 0 0 0.5rem 0.5rem;
-}
+/* ------------------- MEDIA QUERIES (RESPONSIVIDADE) ------------------- */
 
-.overlay h1 {
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-/* Botões do Carrossel */
-.seta {
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: none;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-}
-
-/* Responsividade */
+/* Tablets e Telas Médias */
 @media (max-width: 1024px) {
     .cartao {
-        flex: 0 0 calc(33.33vw - 1.5rem);
+        flex: 0 0 calc(33.33% - 1.5rem); /* Mostra 3 itens */
     }
 
-    /* 3 itens */
-    .pesquisar-container input {
-        width: 25vw;
+    .nav-em-partes {
+        gap: 1.5rem;
+    }
+    
+    .nav-em-partes li a {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 600px) {
-    .cartao {
-        flex: 0 0 calc(50vw - 2rem);
+/* Celulares Grandes */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Menu e busca um em cima do outro */
+        gap: 1rem;
     }
 
-    /* 2 itens */
-    .nav-em-partes {
-        display: none;
-    }
-
-    /* Esconde menu no mobile para simplificar */
     .hero {
-        height: 50vh;
+        height: 60dvh;
+        padding: 1.5rem;
+    }
+
+    .cartao {
+        flex: 0 0 calc(50% - 1rem); /* Mostra 2 itens */
+    }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+    .nav-em-partes {
+        display: none; /* Esconde links para economizar espaço */
+    }
+
+    .hero p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cartao {
+        flex: 0 0 80%; /* Mostra 1 item e um pedaço do próximo */
+    }
+    
+    .pesquisar-container input {
+        width: 150px;
     }
 }
