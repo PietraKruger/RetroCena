@@ -1,3 +1,4 @@
+/* ------------------- RESET E BASE ------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -14,16 +15,18 @@ body {
     overflow-x: hidden;
 }
 
+/* ------------------- NAVEGAÇÃO ------------------- */
 nav {
     display: flex;
     flex-direction: row;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
     gap: 2rem;
+    width: 100%;
 }
 
 
@@ -52,41 +55,28 @@ nav {
 
 /* ------------------- BARRA DE PESQUISA ------------------- */
 .pesquisar-container {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 3rem;
-    border: white;
-    /* border: size 20px;*/
-    border-radius: 15px;
-    /*padding: 0rem 0em 0rem 10rem;*/
+    padding-right: 2rem;
 }
 
 .pesquisar-container input {
     color: white;
     background-color: transparent;
     border-radius: 42px;
-    background-image: url(/assets/img/tela-inicial/pesquisar.png);
-    background-repeat: no-repeat;
-    background-position: 9rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border: 2px solid white;
+    width: 200px;
+    transition: width 0.3s ease;
 }
 
 ::placeholder {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     font-family: 'century gothic', sans-serif;
-    font-size: 1rem;
 }
 
-.pesquisar-container .pesquisar-icone {
-    position: absolute;
-    right: 11.5%;
-    transform: translateY(100% 50%);
-    width: 1rem;
-    height: 1rem;
-}
-
-
+/* ------------------- HERO SECTION ------------------- */
 .hero {
     display: flex;
     flex-direction: column;
@@ -129,12 +119,13 @@ nav {
 
 }
 
-/* Main Content & Carrossel */
+/* ------------------- CARROSSEL ------------------- */
 main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
     padding: 2vh 0;
+    width: 100%;
 }
 
 .lista-container {
@@ -143,7 +134,7 @@ main {
     justify-content: center;
     position: relative;
     padding: 0 2vw;
-    width: 100vw;
+    width: 100%;
 }
 
 .carrossel-window {
@@ -163,7 +154,8 @@ main {
     flex: 0 0 calc(20vw - 1.5rem);
     /* Exibe 5 itens por padrão */
     position: relative;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
+    /* Proporção widescreen */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -189,9 +181,12 @@ main {
 }
 
 .overlay h1 {
+    font-size: 0.9rem;
+    text-align: center;
     font-size: 1rem;
     font-family: 'century gothic', sans-serif;
     color: white;
+
 }
 
 /* Botões do Carrossel */
@@ -211,21 +206,58 @@ main {
 }
 
 /* Responsividade */
-
 @media (max-width: 1024px) {
     .cartao {
-        flex: 0 0 calc(33.33vw - 1.5rem);
+        flex: 0 0 calc(33.33% - 1.5rem);
+        /* Mostra 3 itens */
     }
 
-    /* 3 itens */
-    .pesquisar-container input {
-        width: 25vw;
+    .nav-em-partes {
+        gap: 1.5rem;
+    }
+
+    .nav-em-partes li a {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 600px) {
-    .cartao {
-        flex: 0 0 calc(50vw - 2rem);
+/* Celulares Grandes */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* Menu e busca um em cima do outro */
+        gap: 1rem;
     }
 
+    .hero {
+        height: 60dvh;
+        padding: 1.5rem;
+    }
+
+    .cartao {
+        flex: 0 0 calc(50% - 1rem);
+        /* Mostra 2 itens */
+    }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+    .nav-em-partes {
+        display: none;
+        /* Esconde links para economizar espaço */
+    }
+
+    .hero p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cartao {
+        flex: 0 0 80%;
+        /* Mostra 1 item e um pedaço do próximo */
+    }
+
+    .pesquisar-container input {
+        width: 150px;
+    }
 }
