@@ -1,3 +1,4 @@
+/* ------------------- RESET E BASE ------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -5,66 +6,127 @@
 }
 
 body {
-    background-color: #0a0a0a;
-    color: white;
-    font-family: 'Century Gothic', sans-serif;
-    overflow-x: hidden;
-    width: 100vw;
-}
-
-/* Hero Section */
-.hero {
-    width: 100vw;
-    height: 80vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #0a0a0a),
-        url('/img/tela-inicial/minha-mae-e-uma-peca.png');
-    background-size: cover;
-    background-position: center;
+    background-color: black;
     display: flex;
-    flex-direction: column;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
+    width: 100dvw;
+    justify-content: center;
     align-items: center;
-    padding: 2rem 4vw;
+    flex-direction: column;
+    overflow-x: hidden;
 }
+
+/* ------------------- NAVEGAÇÃO ------------------- */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    gap: 2rem;
+    width: 100%;
+}
+
 
 .nav-em-partes {
     display: flex;
+    gap: 2rem;
     list-style: none;
-    gap: 3rem;
+}
+
+.nav-em-partes img {
+    width: 95dvw;
+    height: 90dvh;
 }
 
 .nav-em-partes li a {
     color: white;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .nav-em-partes li a:hover {
     color: #2C6FD1;
 }
 
-.pesquisar-container input {
-    background: transparent;
-    border: 0.15rem solid white;
-    border-radius: 2rem;
-    padding: 0.5rem 1.5rem;
-    color: white;
-    outline: none;
-    width: 15vw;
+/* ------------------- BARRA DE PESQUISA ------------------- */
+.pesquisar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
 }
 
-/* Main Content & Carrossel */
+.pesquisar-container input {
+    color: white;
+    background-color: transparent;
+    border-radius: 42px;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'century gothic', sans-serif;
+}
+
+/* ------------------- HERO SECTION ------------------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90dvh;
+    width: 95dvw;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 10dvh;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero img {
+    width: 95dvw;
+    height: 90dvh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.hero:hover {
+    transform: scale(1.05);
+}
+
+.sobreposto {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    position: absolute;
+    bottom: 0;
+    width: 95dvw;
+}
+
+.sobreposto p {
+    font-weight: 700;
+    font-size: 4rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'century gothic', sans-serif;
+    color: white;
+
+}
+
+/* ------------------- CARROSSEL ------------------- */
 main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
     padding: 2vh 0;
+    width: 100%;
 }
 
 .lista-container {
@@ -73,7 +135,7 @@ main {
     justify-content: center;
     position: relative;
     padding: 0 2vw;
-    width: 100vw;
+    width: 100%;
 }
 
 .carrossel-window {
@@ -88,10 +150,13 @@ main {
 }
 
 .cartao {
+    display: flex;
+    right: 2rem;
     flex: 0 0 calc(20vw - 1.5rem);
     /* Exibe 5 itens por padrão */
     position: relative;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
+    /* Proporção widescreen */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -119,6 +184,10 @@ main {
 .overlay h1 {
     font-size: 0.9rem;
     text-align: center;
+    font-size: 1rem;
+    font-family: 'century gothic', sans-serif;
+    color: white;
+
 }
 
 /* Botões do Carrossel */
@@ -140,27 +209,52 @@ main {
 /* Responsividade */
 @media (max-width: 1024px) {
     .cartao {
-        flex: 0 0 calc(33.33vw - 1.5rem);
+        flex: 0 0 calc(33.33% - 1.5rem);
+        /* Mostra 3 itens */
     }
 
-    /* 3 itens */
-    .pesquisar-container input {
-        width: 25vw;
+    .nav-em-partes {
+        gap: 1.5rem;
+    }
+
+    .nav-em-partes li a {
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 600px) {
-    .cartao {
-        flex: 0 0 calc(50vw - 2rem);
+/* Celulares Grandes */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* Menu e busca um em cima do outro */
+        gap: 1rem;
     }
 
-    /* 2 itens */
-    .nav-em-partes {
-        display: none;
-    }
-
-    /* Esconde menu no mobile para simplificar */
     .hero {
-        height: 50vh;
+        height: 60dvh;
+        padding: 1.5rem;
+    }
+
+    .cartao {
+        flex: 0 0 calc(50% - 1rem);
+        /* Mostra 2 itens */
+    }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 480px) {
+
+    .hero p {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .cartao {
+        flex: 0 0 80%;
+        /* Mostra 1 item e um pedaço do próximo */
+    }
+
+    .pesquisar-container input {
+        width: 150px;
     }
 }

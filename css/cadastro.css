@@ -56,25 +56,33 @@ input {
     border-color: #c9c9c9;
 }
 
-a {
-    font-family: 'century gothic', sans-serif;
-    color: #ffffff;
-    margin-bottom: 3dvh;
-    font-weight: 100;
-    text-decoration: none;
-}
 
 .btn-cadastrar {
-    background-color: #ffffff;
-    width: 40dvw;
-    height: 6dvh;
-    border-radius: 7px;
-    font-family: 'century gothic', sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-top: 2dvh;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    background-color: #ffffff;
+    color: #182340;
+    width: 40dvw;
+    height: 6dvh;
+    border-radius: 9px;
+    cursor: pointer;
+    border-color: #556e94;
+    text-decoration: none;
+}
+
+a {
+    font-family: 'century gothic', sans-serif;
+    text-decoration: underline;
+    color: #ffffff;
+    margin-bottom: 1dvh;
+    font-weight: 100;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .background {
@@ -84,7 +92,7 @@ a {
     align-items: center;
 }
 
-.cadastro {
+/* .formulario2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -101,5 +109,4 @@ a {
     border-color: #556e94;
     text-decoration: none;
     /* tira o sublinhado */
-}
 

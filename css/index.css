@@ -7,10 +7,10 @@
 body {
 
     font-family: 'century gothic', sans-serif;
-    font-size: 1dvw;
+    font-size: 0.7rem;
     color: #ffffff;
     font-weight: 600;
-    padding: 120px;
+    padding: 70px;
     margin: auto;
     background-image: url("/img/fundo.png");
     background-repeat: repeat;
@@ -34,7 +34,7 @@ img {
 }
 
 
-form {
+.formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,11 +69,6 @@ input {
     border-color: #c9c9c9;
 }
 
-
-input::placeholder {
-    font-size: 0.90dvw;
-}
-
 .login {
     display: flex;
     justify-content: center;
@@ -90,9 +85,8 @@ input::placeholder {
     cursor: pointer;
     border-color: #556e94;
     text-decoration: none;
-    /* tira o sublinhado */
 }
- 
+
 a {
     font-family: 'century gothic', sans-serif;
     text-decoration: underline;
@@ -101,4 +95,8 @@ a {
     font-weight: 100;
     cursor: pointer;
     text-decoration: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    /* font-size: 0.8rem; */
 }

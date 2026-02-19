@@ -2,27 +2,28 @@ const campEmail = document.getElementById("email");
 const campSenha = document.getElementById("senha");
 const btnCadastrar = document.getElementById("btn-cadastrar");
 
-// Remova a criação do objeto 'usuario' e o 'setItem' daqui de cima, 
-// pois eles rodam antes do usuário digitar qualquer coisa.
+btnCadastrar.addEventListener("click", (event) => {
+    event.preventDefault();
 
-btnCadastrar.addEventListener("click", () => {
-    // 1. Captura os valores no momento do clique
+    // LISTA DE NOMES ALEATÓRIOS
+    const nomesAleatorios = ['Alex', 'Joanna', 'Lucas', 'Pietra', 'Richard', 'Sarah' , 'Édio'];
+    
+    // SORTEANDO UM NOME
+    const nomeSorteado = nomesAleatorios[Math.floor(Math.random() * nomesAleatorios.length)];
+
     const usuario = {
-        email: campEmail.value,
-        senha: campSenha.value,
+        nome: nomeSorteado, // O site dá o nome automaticamente aqui
+        email: campEmail.value.trim(),
+        senha: campSenha.value.trim()
     };
 
-    // 2. Salva no localStorage
     localStorage.setItem("usuario", JSON.stringify(usuario));
-
-    // const user = localStorage.getItem("usuario")
-
-    // if (campEmail.value === user.email && campSenha.value === user.senha) {
-    //     // logica p-ra fazer login
-    // } else {
-    //     alert("usuario ou senha invválida")
-    // }
-
-    // 3. Redireciona para a home
     location.href = "./home.html";
-});         
+});
+
+const novoNome = prompt("Digite o novo nome:", usuario.nome || "");
+// O 'usuario.nome' aqui já será o nome aleatório que o site deu!
+
+// No cadastro:
+const nomeParaSalvar = campNome.value.trim() || nomeSorteado;
+           
