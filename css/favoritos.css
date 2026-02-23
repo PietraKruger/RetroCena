@@ -9,93 +9,135 @@ body {
   background-color: #000;
   font-family: sans-serif;
   color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 60px;
-  /* largura estreita */
-  height: 100vh;
-  /* ocupa tela toda */
-  background: #00040a;
-  /* fundo preto */
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  gap: 5rem;
+}
+
+/* aqui embaixo, dependendo da pagina é necessario modificar o gap */
+.nav-em-partes {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem
+}
+
+.nav-em-partes img {
+  width: 95dvw;
+  height: 90dvh;
+}
+
+.nav-em-partes li a {
+  color: white;
+  font-family: 'century gothic', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-em-partes li a:hover {
+  color: #2C6FD1;
+}
+
+/* ------------------- BARRA DE PESQUISA ------------------- */
+.pesquisar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.pesquisar-container input {
+  color: white;
+  background-color: transparent;
+  border-radius: 42px;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'century gothic', sans-serif;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* centralizar ícones na horizontal */
-  padding: 10px 0;
-  gap: 30px;
-  /* espaço entre os ícones */
+  height: 90dvh;
+  width: 95dvw;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 10dvh;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/* Ícones */
-.sidebar #icones {
-  color: #ffffff;
-  text-decoration: none;
-  /* tamanho do ícone */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4dvw;
-  height: 4px;
-  border-radius: 8px;
-  transition: background 0.3s;
+.hero img {
+  width: 95dvw;
+  height: 90dvh;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
-.sidebar #icones :hover {
-  background: rgba(255, 255, 255, 0.1);
+.hero:hover {
+  transform: scale(1.05);
 }
 
-
-.linhas {
-  display: flex;
-  align-items: center;
-  margin-top: 2dvh;
-  margin-bottom: 5dvh;
+.sobreposto {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  position: absolute;
+  bottom: 0;
+  width: 95dvw;
 }
 
-.configuracoes {
-  display: flex;
-  align-items: center;
-  margin-top: 40dvh;
+.sobreposto p {
+  font-weight: 700;
+  font-size: 5rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  font-family: 'century gothic', sans-serif;
+  color: white;
+
 }
+
 
 main {
   background-color: #000;
   font-family: 'century gothic', sans-serif;
-  font-size: 2dvh;
+  font-size: 1.5rem;
   color: #ffffff;
   font-weight: 600;
   margin-right: 60px;
-}
-
-.logo {
-
   display: flex;
-  justify-content: flex-start;
-  cursor: pointer;
-  align-items: flex-start;
-  width: 50%;
-  height: auto;
-  margin-top: 10px;
-}
-
-#logo2 {
-  width: 30%;
-  height: auto;
-}
-
-.flex {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
-.favoritos {
+
+
+section {
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   font-family: 'century gothic', sans-serif;
   margin-left: 50px;
   font-weight: 700;
@@ -103,78 +145,84 @@ main {
   font-style: italic;
 }
 
-.banner {
+.lista {
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-items: space-around;
-  position: relative;
-}
-
-
-
-.cartao {
-  position: relative;
-}
-
-.overlay {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  top: 70%;
-  bottom: 0;
-  left: 2%;
-  right: 0;
-  position: absolute;
-  font-family: 'century gothic', sans-serif;
-  font-weight: 800;
-  font-size: 4dvw;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 1rem;
+  cursor: pointer;
 }
 
 h1 {
-  font-family: 'century gothic', sans-serif;
-  font-weight: 700;
-  font-size: 3dvw;
-  font-style: italic;
+  padding-left: 4rem;
+
 }
 
-h2 {
-  font-family: 'century gothic', sans-serif;
-  font-weight: 500;
-  font-size: 1.5dvw;
+footer {
+    font-family: 'century gothic', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    /* background-color: #001A4C; */
+    height: 50dvh;
+    width: 100dvw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 26, 76, 1) 100%);
+
 }
 
-#sombra {
-  opacity: 85%;
-  width: 100%;
-  border-radius: 5px;
+.outros-apps span {
+    font-family: 'century gothic', sans-serif;
+    font-size: 1.3rem;
 }
 
-.botao {
-  display: flex;
-  justify-content: center;
-  flex-wrap: row;
-  align-items: center;
-  margin-top: 0.2dvh;
-  margin-bottom: 0.3dvh;
-  background-color: #ffffff;
-  color: #2b3f65;
-  font-family: 'century gothic', sans-serif;
-  font-weight: 600;
-  font-size: 0.90dvw;
-  width: 6dvw;
-  height: 1dvh;
-  border-radius: 5px;
-  cursor: pointer;
-  border-color: #ffffff;
-  padding: 1em;
+.app {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    padding-bottom: 1rem;
 }
 
-.lista {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1em;
-  gap: 1em;
-  cursor: pointer;
+.apps {
+    display: flex;
+    padding-bottom: 1.2rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.apps img {
+    height: 5.2dvh;
+    width: 2.5dvw;
+    cursor: pointer;
+}
+
+.colaboradores {
+    text-decoration: none;
+    gap: 0.5rem;
+
+}
+
+.colaboradores p {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+ol {
+    display: grid;
+    grid-template-columns: 60px 60px;
+    column-gap: 4rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2.3rem;
 }

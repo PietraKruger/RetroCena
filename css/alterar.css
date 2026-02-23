@@ -9,12 +9,77 @@ body {
   background-color: #000000;
   font-family: sans-serif;
   color: #ffffff;
+   overflow-x: hidden;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+/* aqui embaixo, dependendo da pagina é necessario modificar o gap */
+.nav-em-partes {
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-em-partes img {
+    width: 95dvw;
+    height: 90dvh;
+}
+
+.nav-em-partes li a {
+    color: white;
+    font-family: 'century gothic', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+     display: flex;
+    justify-content: space-around;
+}
+
+.nav-em-partes li a:hover {
+    color: #2C6FD1;
+}
+
+/* ------------------- BARRA DE PESQUISA ------------------- */
+.pesquisar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.pesquisar-container input {
+    color: white;
+    background-color: transparent;
+    border-radius: 42px;
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'century gothic', sans-serif;
+}
+
 
 main {
   background-color: #000;
   font-family: 'century gothic', sans-serif;
-  font-size: 2dvh;
+  font-size: dvh;
   color: #ffffff;
   font-weight: 600;
   margin-right: 60px;
@@ -25,9 +90,9 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 40dvw;
+  width: 60dvw;
   height: 80dvh;
-  background-color: #000c22;
+  background-color: #001A4C;
   opacity: 92%;
   border-radius: 30px;
 }
@@ -87,7 +152,7 @@ form {
   color: #182340;
   font-family: 'century gothic', sans-serif;
   font-weight: 700;
-  width: 15dvw;
+  width:30dvw;
   height: 7dvh;
   border-radius: 9px;
   cursor: pointer;
@@ -108,7 +173,7 @@ form {
   color: #182340;
   font-family: 'century gothic', sans-serif;
   font-weight: 700;
-  width: 15dvw;
+  width:30dvw;
   height: 7dvh;
   border-radius: 9px;
   cursor: pointer;
@@ -116,4 +181,71 @@ form {
   padding: 1em;
   text-decoration: none;
   /* tira o sublinhado */
+}
+
+footer {
+    font-family: 'century gothic', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    /* background-color: #001A4C; */
+    height: 50dvh;
+    width: 100dvw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 26, 76, 1) 100%);
+
+}
+
+.outros-apps span {
+    font-family: 'century gothic', sans-serif;
+    font-size: 1.3rem;
+}
+
+.app {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    padding-bottom: 1rem;
+}
+
+.apps {
+    display: flex;
+    padding-bottom: 1.2rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.apps img {
+    height: 5.2dvh;
+    width: 2.5dvw;
+    cursor: pointer;
+}
+
+.colaboradores {
+    text-decoration: none;
+    gap: 0.5rem;
+
+}
+
+.colaboradores p {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+ol {
+    display: grid;
+    grid-template-columns: 60px 60px;
+    column-gap: 4rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2.3rem;
 }

@@ -30,10 +30,13 @@ nav {
 }
 
 
+/* aqui embaixo, dependendo da pagina é necessario modificar o gap */
 .nav-em-partes {
     display: flex;
-    gap: 2rem;
+    gap: 6rem;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-em-partes img {
@@ -48,6 +51,8 @@ nav {
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-em-partes li a:hover {
@@ -183,7 +188,6 @@ main {
 
 .overlay h1 {
     font-size: 0.9rem;
-    text-align: center;
     font-size: 1rem;
     font-family: 'century gothic', sans-serif;
     color: white;
@@ -205,6 +209,74 @@ main {
     justify-content: center;
     font-size: 1.5rem;
 }
+
+footer {
+    font-family: 'century gothic', sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    /* background-color: #001A4C; */
+    height: 50dvh;
+    width: 100dvw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 26, 76, 1) 100%);
+
+}
+
+.outros-apps span {
+    font-family: 'century gothic', sans-serif;
+    font-size: 1.3rem;
+}
+
+.app {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    padding-bottom: 1rem;
+}
+
+.apps {
+    display: flex;
+    padding-bottom: 1.2rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.apps img {
+    height: 5.2dvh;
+    width: 2.5dvw;
+    cursor: pointer;
+}
+
+.colaboradores {
+    text-decoration: none;
+    gap: 0.5rem;
+
+}
+
+.colaboradores p {
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+ol {
+    display: grid;
+    grid-template-columns: 60px 60px;
+    column-gap: 4rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2.3rem;
+}
+
 
 /* Responsividade */
 @media (max-width: 1024px) {
