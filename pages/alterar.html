@@ -2,21 +2,23 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RetroCena</title>
-   <link rel="icon" type="image/x-icon" href="/img/logo_abaW.png" />
-    <link rel="stylesheet" href="/css/alterar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RetroCena</title>
+  <link rel="icon" type="image/x-icon" href="/img/logo_abaW.png" />
+  <link rel="stylesheet" href="/css/alterar.css">
+  <link rel="stylesheet" href="/css/navigation.css">
 </head>
 
 <body>
-<!---------NAVEGATION BAR--------->
+   <div id="transition-layer" class="transition-div"></div>
+  <!---------NAVEGATION BAR--------->
   <nav>
     <!-- Logo -->
     <div class="logo">
       <img src="/img/logoLongaW.png" />
     </div>
-    
+
     <ul class="nav-em-partes">
       <li alt="Início"><a href="/pages/home.html">Início</a></li>
       <li alt="Favoritos"><a href="/pages/favoritos.html">Favoritos</a></li>
@@ -29,34 +31,34 @@
         <input type="search" placeholder="Pesquisar" />
       </div>
     </div>
-   </div>
+    </div>
   </nav>
-    <main>
+  <main>
 
-        <div class="background">
-            <form>
-                <div class=" foto">
-                    <!-- <img id="delete" src="/img/tela-perfil/delete-icon.svg"/> -->
-                    <img id="usuario" src="/img/tela-perfil/perfil.png" />
-                </div>
-                <span class="imutavel">Nome de usuario:</span>
-                <span class="mutavel"></span>
-                <span class="imutavel">E-mail:</span>
-                <span class="mutavel"></span>
-                <span class="imutavel">senha:</span>
-                <span class="mutavel"></span>
-                <a href="#" class="editar" onclick="editarPerfil(event)">
-                      Editar
-                </a>
-
-                <a href="#" class="remover" onclick="excluirPerfil(event)">
-                      Remover
-                </a>
-            </form>
+    <div class="background">
+      <form>
+        <div class=" foto">
+          <!-- <img id="delete" src="/img/tela-perfil/delete-icon.svg"/> -->
+          <img id="usuario" src="/img/tela-perfil/perfil.png" />
         </div>
-    </main>
+        <span class="imutavel">Nome de usuario:</span>
+        <span class="mutavel"></span>
+        <span class="imutavel">E-mail:</span>
+        <span class="mutavel"></span>
+        <span class="imutavel">senha:</span>
+        <span class="mutavel"></span>
+        <a href="#" class="editar" onclick="editarPerfil(event)">
+          Editar
+        </a>
 
-     <footer class="footer">
+        <a href="#" class="remover" onclick="excluirPerfil(event)">
+          Remover
+        </a>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
     <div class="outros-apps">
       <span>Nossas redes sociais:</span>
       <div class="app">
@@ -91,7 +93,9 @@
       </ol>
     </div>
   </footer>
-    <script src="/js/alterar.js"></script>
+
+  <script src="/js/alterar.js"></script>
+  <script src="/js/navigation.js"></script>
 </body>
 
 </html>
